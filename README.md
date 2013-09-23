@@ -1,9 +1,13 @@
 True Friend
 ===========
-Priviously Landing
+Previously Landing
 ------------------
 
-Read Me needs updating...
+To Do:
+
+1. Read Me needs updating.
+2. Set up proper 'submodule' configuration
+3. Create child theme repository to fit.
 
 Landing is a wordpress theme framework created for internal use at [Cartogram](https://www.studiocartogram.com).
 
