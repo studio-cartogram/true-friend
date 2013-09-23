@@ -1,0 +1,63 @@
+.slides-navigation {
+	position:absolute;
+	width:100%;
+	z-index:2;
+	top:50%;
+	margin-top:$half-spacing-unit;
+	//background:$white;
+	text-align:center;
+	height:$bar--height;
+	&.slides-navigation--active {
+		bottom:100px;
+	}
+	a {
+		@extend h5;
+		color:$white;
+		position:absolute;
+		padding:0 $base-spacing-unit;
+		
+	}
+	.prev {
+	
+		float:left;
+	}
+
+	.next {
+		float:right;
+	}
+	
+}
+
+.casestudy-title {
+	position:absolute;
+	top:$base-spacing-unit;
+	left: 0;
+	right: 0;
+	text-align: center;
+	color: $white;
+	z-index:2;
+}
+
+
+.slides-pagination {
+	position: absolute;
+	z-index: 3;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	display:table;
+}
+.slides-pagination a {
+	display:table-cell;
+	overflow: hidden;
+	text-indent: -100%;
+	background: $red;
+	height:2px;
+	line-height:0;
+	&:hover {
+		background: $redDark;
+	}
+	&.current {
+		background: $redDark;
+	}
+}

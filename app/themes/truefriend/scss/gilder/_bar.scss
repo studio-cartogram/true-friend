@@ -1,0 +1,245 @@
+
+
+
+.bar {
+	height:$bar--height--palm;
+	z-index: 10;
+	position:relative;
+	overflow:hidden;
+	background:none;
+	.logo--small > a {
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-image:none;
+		@extend .icon-logo-g;
+		display:block;
+		padding:0;
+		height:50px;
+		width:60px;
+		position:absolute;
+		bottom:-50px;
+		left:0;
+		margin:0;
+		color:$white;
+		&:before {
+			position:absolute;
+			@include font-size(30px);
+			left:15px;
+		}
+	}
+	.nav-trigger {
+		
+		left:60px;
+		content: ' ';
+		background:$redLight;
+		height:51px;
+		width:60px;
+		position:absolute;
+		margin-top:-1px;
+		z-index: 10;
+		display:block;
+		bottom:-0px;
+		
+		&:before {
+			z-index: 12;
+			content:' ';
+			height:3px;
+			background:$white;
+			position:absolute;
+			width:30px;
+			left:15px;
+			top: 50%;
+			margin-top: -1px;
+			@include box-shadow(0 -10px 0px 0px $white, 0 10px 0px 0px $white );
+		}
+	}
+
+	li:not(.logo--small) {
+		display:block;
+		a {
+			padding:1.5em;
+			color:$white;
+			text-transform: uppercase;
+			@include font-size(12px);
+			letter-spacing:0.2em;
+			position:relative;
+			border-top:1px solid rgba($white, 0.4);
+			width:100%;
+			&.current {
+				&:after {
+					opacity: 1;
+					left:-100%;
+				}
+			}
+			&:hover {
+				color:$white!important;
+			}
+			&:after {
+				position:absolute;
+				border-top:1px solid $white;
+				content: ' ';
+				width:200px;
+				bottom:0;
+				height: 0;
+				left:-110%;
+				z-index: -1;
+				@include transform(rotate(-45deg));
+				@include transition(all .2s ease-in-out);
+				width:200px;
+				opacity: 0;
+			}
+		}
+		&:last-child a {
+			border-bottom:1px solid rgba($white, 0.4);
+		}
+		
+	}
+	ul {
+		position:absolute;
+		bottom:50px;
+		margin:0;
+		width:100%;
+		li {
+			background:$redLight;
+			
+			a {
+				
+			}
+		}
+
+	}
+	li.link-process {
+		display:none;
+	}
+	li.link-casestudies {
+		display:none;
+	}
+
+
+	@include media-query(desk) {
+		border:none;
+		height:$bar--height;
+		overflow: hidden;
+		.nav-trigger { 
+			display:none;
+		}
+		ul {
+			margin:0 auto;
+			max-width:$desk-start;
+			position:relative;
+			bottom:0;
+			padding:$half-spacing-unit;
+		}
+		.logo--small {
+			> a {
+				height:60px;
+				width:60px;
+				position:static;
+				background-image:url(images/logo.svg);
+				&:after {
+					border:85px solid;
+					border-color:  $redDark  transparent transparent $redDark;
+					content: ' ';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					width: 0;
+					height: 0;
+					left: 0;
+					right: auto;
+					z-index: -1;
+					background:none;
+					@include box-shadow(0 0 0);
+				}
+				&:before {
+					display:none;
+				}
+			}	
+			&:after {
+				background: $redDark;
+				content: ' ';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				height: 110%;
+				left: auto;
+				right: 100%;
+			}
+		}
+		
+		li.link-process, li.link-casestudies {
+			width:0px;
+			display: block;
+			@include transition(all .2s ease-in-out);
+			a {
+				color:$red;
+			}
+		}
+		
+		li:not(.logo--small) {
+			display:inline-block;
+			background:none !important;
+			a {
+				
+				border:none !important;
+				width:auto;
+				&.current {
+					&:after {
+						opacity: 1;
+						left:-100%;
+					}
+				}
+				&:hover {
+					@include opacity(0.7);
+				}
+				&:after {
+					position:absolute;
+					border-top:1px solid $white;
+					content: ' ';
+					bottom:0;
+					height: 0;
+					left:-110%;
+					z-index: -1;
+					@include transform(rotate(-45deg));
+					@include transition(all .2s ease-in-out);
+					width:215px;
+					opacity: 0;
+				}
+			}
+			&.link-pageprocess a:after { 
+				left:-80%;
+			}
+			&.link-process a:after {
+				left:-250%;
+			}
+			&.link-pagecasestudy a:after { 
+				left:-50%;
+			}
+			&.link-pagecontact a:after { 
+				left:-80%;
+			}
+			&.link-casestudies a:after {
+				left:-260%;
+			}
+		}
+	}
+}
+
+.bar.nav--process--enter ul li.link-process, .bar.nav--casestudies--enter ul li.link-casestudies {
+ 	width:65px;
+	@include transition(all .2s ease-in-out);
+	a {
+		color:$white !important;
+		
+	}
+}
+
+
+
+
+.bar--open {
+	overflow:visible;
+}
+

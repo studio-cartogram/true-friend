@@ -1,0 +1,83 @@
+h1, h2, h3, h4, h5, h5, h6, p, li {
+	font-family:$font-family-main;
+	color:$white;
+}
+
+h1 {
+	text-transform:uppercase;
+	letter-spacing:0.1em;
+	font-weight:$weight--bold;
+	width:100%;
+	a, a:hover {
+		cursor: pointer;
+		color:inherit;
+	}
+}
+
+h2 {
+	text-transform:uppercase;
+	letter-spacing:0.1em;
+	line-height:1.2;
+	font-weight:$weight--semibold;
+}
+
+
+h3 {
+	text-transform:uppercase;
+	letter-spacing:0.1em;
+	line-height:1.2;
+	font-weight:$weight--semibold;
+	color:$black;
+}
+h4 {
+	text-transform:uppercase;
+	letter-spacing:0.1em;
+	line-height:1.2;
+	font-weight:$weight--semibold;
+
+}
+
+h5 {
+	text-transform:uppercase;
+	letter-spacing:0.1em;
+	line-height:1.2;
+	font-weight:$weight--semibold;
+
+}
+
+p {
+	font-weight:$weight--regular;
+	letter-spacing:0.05em;
+
+	.content-section-about & {
+		@include font-size(22px);
+		line-height: 1.6;
+
+	}
+}
+
+ul, li, ul ul {
+	list-style:none;
+	margin:0;
+
+}
+
+@include media-query(palm){
+	h2 {
+		@include font-size(14px);
+		line-height:1.3;
+		margin-bottom:$half-spacing-unit;
+	}
+	
+	p {
+
+		@include font-size(13px);
+		line-height:1.4;
+		margin-bottom:$half-spacing-unit;
+		.content-section-about & {
+			@include font-size(14px);
+			line-height:1.4;
+		}
+}
+}
+

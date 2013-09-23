@@ -1,0 +1,17 @@
+/* Set all parents to full height */
+html, body, 
+.container,
+.scroller,
+.scroller section { 
+  height: 100%; 
+}
+
+.cover-image {
+	position: relative;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.no-touch & {
+		background-attachment: fixed;
+	}
+}

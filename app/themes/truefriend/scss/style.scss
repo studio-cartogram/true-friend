@@ -1,0 +1,65 @@
+/*
+Theme Name: The Gilder
+Theme URI: http://www.thegilder.ca
+Description: WordPress Theme for the gilder
+Author: Matt Seccafien
+Author URI: http://www.studiocartogram.com
+Version: 1.0
+*/
+@charset "UTF-8";
+
+/*------------------------------------*\
+    STYLE.CSS
+\*------------------------------------*/
+/**
+ *
+ * sass --watch style.scss:style.min.css --style compressed
+ *
+ * Here we pull in some variables, include the inuit.css framework, then add our
+ * project-specific components afterwards.
+ */
+
+
+/**
+ * Setup
+ */
+
+@import "compass/css3";
+@import "vars";
+@import "../bower_components/inuit.css/inuit";
+
+
+/**
+ * Begin importing your stuff here.
+ * Vendor First
+ */
+@import "vendor/scroller";
+@import "vendor/superslides";
+@import "vendor/easydropdown";
+
+
+
+/**
+ * Generic Styles
+ */
+@import "generic/helper";
+@import "generic/mixins";
+
+/**
+ * UI theme
+ */
+@import "gilder/type";
+@import "gilder/logo";
+@import "gilder/bar";
+@import "gilder/lists";
+@import "gilder/links";
+@import "gilder/screen";
+@import "gilder/forms";
+@import "gilder/slideshow";
+@import "gilder/contact";
+
+@import "gilder/themes";
+
+@import "gilder/shame";
+@import "gilder/iconfont";
+@import "gilder/icons";

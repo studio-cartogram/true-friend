@@ -1,0 +1,36 @@
+.logo {
+	background-image:url(images/logo.svg);
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center center;
+	height:250px;
+	width:250px;
+	
+	
+	z-index:2;
+
+	@extend .center-vertical;
+	
+	&.logo__part--1, 
+	&.logo__part--2, 
+	&.logo__part--3, 
+	&.logo__part--4 {	
+		display:none;
+	}
+	
+	@include media-query(lap-and-up) {
+		&.logo__part--1, 
+		&.logo__part--2, 
+		&.logo__part--3, 
+		&.logo__part--4 {
+			background-image:none;
+			z-index:1;
+			display:block;
+		}
+	
+		height:375px;
+		width:375px;
+	}
+}
+
+

@@ -1,0 +1,47 @@
+a {
+	color:$white;
+	text-decoration:none;
+	@include transition(color .2s);
+	&:hover {
+		color:$black;
+	}
+}
+
+
+.btn--natural {
+	@extend h3;
+	padding-top:$base-spacing-unit;
+	background:none;
+	border:none !important;
+	cursor:pointer;
+	padding:$base-spacing-unit 0 0 0;
+	margin:$half-spacing-unit / 2 0 0 ;
+	color:$white;
+	display:block;
+	&:hover {
+		background:none !important;
+		
+	}
+}
+
+.island {
+	h3 {
+		color:$white;
+	}
+	a {
+		border-bottom:1px solid;
+		&:hover {
+		}
+	}
+}
+
+.nav--social {
+	a {
+		border-bottom:none;
+		margin-right:$half-spacing-unit ;
+		@include font-size(15px);
+		margin-bottom:2px;
+	
+	}
+	
+}

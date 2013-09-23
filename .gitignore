@@ -1,0 +1,16 @@
+/.htaccess
+/wp-config.php
+**/*.DS_Store
+**/*.scssc
+
+/app/*
+!/app/themes
+!/app/plugins
+
+/app/themes/*
+!/app/themes/truefriend
+!/app/themes/cartogram
+/app/themes/truefriend/bower_components
+/app/themes/truefriend/node_modules
+/app/themes/cartogram/bower_components
+/app/themes/cartogram/node_modules

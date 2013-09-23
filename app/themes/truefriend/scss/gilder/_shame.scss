@@ -1,0 +1,28 @@
+.content {
+	margin:auto;
+	text-align:left;
+	@extend .center-vertical;
+	width:80%;
+	max-width:650px;
+	z-index:2;
+}
+
+
+.overlay {
+	position:relative;
+	&:after {
+		position:absolute;
+		left:0;
+		top:0;
+		right:0;
+		bottom:0;
+		content:'';
+		background:rgba($yellow, 0.8);
+	}
+}
+
+@include media-query(palm){
+	.three-cols > li {
+		width:100%;
+	}
+}

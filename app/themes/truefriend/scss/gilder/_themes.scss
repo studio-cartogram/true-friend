@@ -1,0 +1,361 @@
+
+
+#theme-blue {
+	
+	background:$blue;
+
+	.overlay:after {
+		background:rgba($blue, $overlayOpacity);
+	}
+
+	/* Blue Logo */
+
+
+	.logo-primary {
+		fill: $blue;
+	}
+	.logo-light {
+		fill: $blueLight;
+	}
+	.logo-lighter {
+		fill: $blueLighter;
+	}
+	.logo-dark {
+		fill: $blueDark;
+	}
+
+	/* Blue Bar */
+
+	.bar .logo--small {
+		> a {
+			background-color:$blueDark;
+			&:after {
+				border-color:  $blueDark  transparent transparent $blueDark;
+			}
+		}
+		&:after {
+			background: $blueDark;
+		}
+	}
+	.bar li:not(.logo--small) a:hover {
+		color:$blueDark;
+	}
+	
+	.nav-trigger, .bar ul li {
+		background:$blueLight;
+	}
+	
+	h1,
+	.bar ul li.link-process a,
+	.bar ul li.link-casestudies a {
+		color:$blue;
+	}
+
+	.content-contact {
+		background:$blue;
+	}
+
+	.grid__item__block--bg {
+		background:$blueLight;
+	}
+	
+	
+	/* Slider */
+
+	.slides-pagination a {
+	
+		background: $blue;
+		
+		&:hover {
+			background: white;
+		}
+		&.current {
+			background: $blueDark;
+		}
+	}
+
+	/* Forms */
+
+	.dropdown {
+		background:$blueLight;
+		border:$blueLighter 1px solid;
+
+		ul {
+			background:$blueLight;
+			border-color:$blueLighter;
+			li{
+
+			}
+		}
+	}
+
+	.text-input,
+	input[type=text],
+	input[type=tel],
+	input[type=email],
+	textarea{
+		border-color:$blueLighter;
+		background:$blueLight;
+	}
+
+
+	input[type=submit],
+	button {
+		background:$blueLight;
+	}
+
+	.slides-navigation a, .casestudy-title {
+		color:$blue;
+	}
+	
+	@include media-query(desk) { 
+		.bar {
+			background:$blue;
+		}
+	}
+
+
+
+}
+
+
+
+#theme-yellow {
+
+	background:$yellow;
+	
+	.overlay:after {
+		background:rgba($yellow, $overlayOpacity);
+	}
+	/* Yellow Logo */
+
+
+	.logo-primary {
+		fill: $yellow;
+	}
+	.logo-light {
+		fill: $yellowLight;
+	}
+	.logo-lighter {
+		fill: $yellowLighter;
+	}
+	.logo-dark {
+		fill: $yellowDark;
+	}
+
+	/* Yellow Bar */
+
+	.bar .logo--small {
+		> a {
+			background-color:$yellowDark;
+			&:after {
+				border-color:  $yellowDark  transparent transparent $yellowDark;
+			}
+		}
+		&:after {
+			background: $yellowDark;
+		}
+	}
+	.bar li:not(.logo--small) a:hover {
+		color:$yellowDark;
+	}
+
+	.nav-trigger, .bar ul li {
+		background:$yellowLight;
+	}
+
+	h1,
+	.bar ul li.link-process a,
+	.bar ul li.link-casestudies a {
+		color:$yellow;
+	}
+
+	.content-contact {
+		background:$yellow;
+	}
+
+	.grid__item__block--bg {
+		background:$yellowLight;
+	}
+	
+	/* Slider */
+
+	.slides-pagination a {
+	
+		background: $yellow;
+		
+		&:hover {
+			background: $yellowDark;
+		}
+		&.current {
+			background: $yellowDark;
+		}
+	}
+
+	/* Forms */
+
+	.dropdown {
+		background:$yellowLight;
+		border:$yellowLighter 1px solid;
+
+		ul {
+			background:$yellowLight;
+			border-color:$yellowLighter;
+			li{
+
+			}
+		}
+	}
+
+	.text-input,
+	input[type=text],
+	input[type=tel],
+	input[type=email],
+	textarea{
+		border-color:$yellowLighter;
+		background:$yellowLight;
+	}
+
+
+	input[type=submit],
+	button {
+		background:$yellowLight;
+	}
+	
+	.slides-navigation a, .casestudy-title {
+		color:$yellow;
+	}
+	@include media-query(desk) { 
+		.bar {
+			background:$yellow;
+		}
+	}
+
+}
+
+
+
+
+
+#theme-red {
+	
+
+	background:$red;
+	
+	.overlay:after {
+		background:rgba($red, $overlayOpacity);
+	}
+
+	/* Red Logo */
+
+	
+	.logo-primary {
+		fill: $red;
+	}
+	.logo-light {
+		fill: $redLight;
+	}
+	.logo-lighter {
+		fill: $redLighter;
+	}
+	.logo-dark {
+		fill: $redDark;
+	}
+	
+
+	/* red Bar */
+
+	.bar .logo--small {
+		> a {
+			background-color:$redDark;
+			&:after {
+				border-color:  $redDark  transparent transparent $redDark;
+			}
+		}
+		&:after {
+			background: $redDark;
+		}
+	}
+	.bar li:not(.logo--small) a:hover {
+		color:$redDark;
+	}
+	
+	.nav-trigger, .bar ul li {
+		background:$redLight;
+	}
+
+	h1,
+	.bar ul li.link-process a,
+	.bar ul li.link-casestudies a {
+		color:$red;
+	}
+
+	.content-contact {
+		background:$red;
+	}
+
+	.grid__item__block--bg {
+		background:$redLight;
+	}
+
+	/* Slider */
+
+	.slides-pagination a {
+	
+		background: $red;
+		
+		&:hover {
+			background: $redDark;
+		}
+		&.current {
+			background: $redDark;
+		}
+	}
+	/* Forms */
+
+	/* Forms */
+
+	.dropdown {
+		background:$redLight;
+		border:$redLighter 1px solid;
+
+		ul {
+			background:$redLight;
+			border-color:$redLighter;
+			li{
+
+			}
+		}
+	}
+
+	.text-input,
+	input[type=text],
+	input[type=tel],
+	input[type=email],
+	textarea{
+		border-color:$redLighter;
+		background:$redLight;
+	}
+
+
+	input[type=submit],
+	button {
+		background:$redLight;
+	}
+	
+	.slides-navigation a, .casestudy-title {
+		color:$red;
+	}
+
+	@include media-query(desk) { 
+		.bar {
+			background:$red;
+		}
+	}
+
+}
+
+
+
+
+
